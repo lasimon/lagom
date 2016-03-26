@@ -18,11 +18,11 @@ The above ensures that the Service Locator knows about the `weather` service. Th
 
 ### Integrating with external Lagom projects
 
-Note that if the service you want to communicate with is actually a Lagom service, you may want to read the documentation for [[integrating with an external Lagom projects|MultipleBuilds]].
+Note that if the service you want to communicate with is actually a Lagom service, you may want to read the documentation for [[integrating with an external Lagom project|MultipleBuilds]].
 
 ## Start and stop
 
-The Service Locator is automatically started when executing the `runAll` task. However, there are times when you might want to manually start only a few services, and hence you won't use the `runAll` task. In this case, you can manually start the Service Locator via the `lagomServiceLocatorStart` task, and stopping it with the `lagomServiceLocatorStop` task.
+The Service Locator is automatically started when executing the `runAll` task. However, there are times when you might want to manually start only a few services, and hence you won't use the `runAll` task. In this case, you can manually start the Service Locator via the `lagomServiceLocatorStart` task, and stop it with the `lagomServiceLocatorStop` task.
 
 ## Disable it
 
