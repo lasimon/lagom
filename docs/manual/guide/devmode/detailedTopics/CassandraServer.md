@@ -1,10 +1,10 @@
 # Cassandra Server
 
-By default, Lagom services needing to persist data use Cassandra as database. Therefore, for conveniency, we have embedded a Cassandra server in the development environment, so that you don't have to worry about installing it. There are a number of settings and tasks available to tune the Cassandra server to your liking, let's explore them:
+By default, Lagom services needing to persist data use Cassandra as the database. For convenience, we have embedded a Cassandra server in the development environment so that you don't have to worry about installing it. There are a number of settings and tasks available to tune the Cassandra server to your liking. Let's explore them:
 
 ## Default port
 
-By default, the Cassandra server is started on port `4000`. We are aware that Cassandra is usually run on port `9042`, and that is precisely the reason why we picked a different port: we do not want to interfere with your locally running Cassandra, if you happen to have one. If the current default port doesn't suit you, and for instance you would prefer to have the embedded Cassandra server running on port `9042`, you can do so by adding the following in your build:
+By default, the Cassandra server is started on port `4000`. We are aware that Cassandra is usually run on port `9042`, and that is precisely the reason we picked a different port: we do not want to interfere with your locally running Cassandra instance, if you happen to have one. If the current default port doesn't suit you, and for instance you would prefer to have the embedded Cassandra server running on port `9042`, you can do so by adding the following in your build:
 
 @[cassandra-port](code/build-cassandra-opts.sbt)
 
@@ -20,7 +20,7 @@ A keyspace in Cassandra is a namespace that defines data replication on nodes. E
 
 @[cassandra-users-project](code/build-cassandra-opts.sbt)
 
-Because the project's name is `users-impl`, the generated Cassandra keyspace will be `users_impl` (note that dashes are replaced with underscores). If you'd prefer the kesyapce to be named simply `users`, you could either change the project's `name` to be `users`, or alternatively add the following setting:
+Because the project's name is `users-impl`, the generated Cassandra keyspace will be `users_impl` (note that dashes are replaced with underscores). If you'd prefer the keyspace to be named simply `users`, you could either change the project's `name` to be `users`, or alternatively add the following setting:
 
 @[cassandra-users-project](code/build-cassandra-opts2.sbt)
 
