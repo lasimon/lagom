@@ -4,4 +4,4 @@ As outlined in the [[development environment introduction|DevEnvironment#One-tas
 
 Most times, the `runAll` task will serve you well. However, there will be occasions when you may want to manually start only a few services, and this is when the `run` task will come in handy. The `run` task is available to each of your Lagom service implementation projects, and you can execute it by simply prefixing the service project's name, i.e., `<your-lagom-project-name>/run`.
 
-One thing you should remember is that `run` only starts the specific service, it doesn't start neither the Service Locator, nor the Cassandra server. Hence, prior to manually starting services, you may want to manually start both the [[Service Locator|ServiceLocator#Start-and-stop]], and the [[Cassandra server|CassandraServer#Start-and-stop]].
+One thing you should remember is that `run` only starts the specific service, it doesn't start either the Service Locator or the Cassandra server. Hence, prior to manually starting services, you may want to manually start both the [[Service Locator|ServiceLocator#Start-and-stop]], and the [[Cassandra server|CassandraServer#Start-and-stop]].
